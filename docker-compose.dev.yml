@@ -22,8 +22,6 @@ services:
     command: >
       sh -c " python manage.py migrate &&
                 gunicorn testapp.wsgi:application --bind 0.0.0.0:5000"
-    links:
-      - db
     volumes:
       - .:/app
       - static_volume:/app/static
