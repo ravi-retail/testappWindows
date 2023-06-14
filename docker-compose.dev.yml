@@ -43,5 +43,5 @@ services:
 volumes:
   postgres_data:
     driver: local
-  static-data:
+  static_volume:
     driver: local
