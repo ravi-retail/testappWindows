@@ -42,3 +42,7 @@ volumes:
     driver: local
   static_volume:
     driver: local
+networks:
+  default:
+    # Use a custom driver
+    driver: custom-driver-1
