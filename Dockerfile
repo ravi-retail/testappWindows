@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8-slim-buster
+FROM python:3.8.10-alpine
 
 # set work directory
 WORKDIR /app

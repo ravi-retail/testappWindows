@@ -11,24 +11,21 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import environ
-import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-env = environ.Env()
-environ.Env.read_env(env_file=os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = int(env("DEBUG", default=1))
+DEBUG = int(config("DEBUG", default=1))
 
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = config("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -80,12 +77,12 @@ WSGI_APPLICATION = 'testapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':  env('DB_ENGINE', default='django.db.backends.sqlite3') ,
-        'NAME': env('DB_NAME', default=BASE_DIR / 'db.sqlite3'),
-        'USER':  env('DB_USER', default=""),
-        'PASSWORD': env('DB_PASSWORD', default=""),
-        'HOST': env('DB_HOST', default=""),
-        'PORT': env('DB_PORT', default=""),
+        'ENGINE':  config('DB_ENGINE', default='django.db.backends.sqlite3') ,
+        'NAME': config('DB_NAME', default=BASE_DIR / 'db.sqlite3'),
+        'USER':  config('DB_USER', default=""),
+        'PASSWORD': config('DB_PASSWORD', default=""),
+        'HOST': config('DB_HOST', default=""),
+        'PORT': config('DB_PORT', default=""),
     }
 }
 
@@ -129,4 +126,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS").split(" ")
+CORS_ALLOWED_ORIGINS = config("CORS_ALLOWED_ORIGINS").split(" ")
