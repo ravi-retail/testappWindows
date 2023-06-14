@@ -17,11 +17,9 @@ services:
     build: .
     restart: always
     env_file: .env
-    ports:
-      - "5000:5000"
-    command: >
-      sh -c " python manage.py migrate &&
-                gunicorn testapp.wsgi:application --bind 0.0.0.0:5000"
+    expose:
+      - "8000"
+    command: gunicorn --config=gunicorn_config.py testapp.wsgi:application
     volumes:
       - .:/app
       - static_volume:/app/static
