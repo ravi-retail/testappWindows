@@ -1,24 +1,21 @@
 version: '3.7'
 services:
   nginx:
-    container_name: core_web
-    restart: on-failure
-    image: nginx:stable
-    volumes:
-      - /root/nginx:/etc/nginx/conf.d
-      - static_volume:/app/static
+    image: nginx:latest
     ports:
-      - "80:80"
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - web
   web:
     container_name: core_app
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     env_file: .env
-    expose:
-      - "8000"
-    command: gunicorn --bind 0.0.0.0:8000 testapp.wsgi --workers=4
+    command: gunicorn testapp.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
       - static_volume:/app/static
