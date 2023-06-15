@@ -4,9 +4,7 @@ services:
     container_name: core_web
     restart: on-failure
     image: nginx:stable
-    command: sh -c "mkdir -p /etc/nginx/conf.d/ && nginx -g 'daemon off;'"
     volumes:
-      - ~/nginx/:/etc/nginx/conf.d/
       - static_volume:/app/static
     ports:
       - "80:80"
