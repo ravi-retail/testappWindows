@@ -3,5 +3,5 @@ db.sqlite3
 .env
 hosting.pptx
 testapp/__pycache__
-.index.html
-.nginx.conf
+index.html
+nginx.conf
