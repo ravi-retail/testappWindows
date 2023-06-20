@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Variables
+REPO_URL="https://github.com/yourusername/yourrepo.git"
+DOCKER_COMPOSE_FILE="docker-compose.yml"
+DOCKER_COMPOSE_PROJECT="your-project"
+CHECK_INTERVAL=60
+LOG_FILE="deployment.log"
+
+while true; do
+    # Pull changes from the repository
+    git pull $REPO_URL >> $LOG_FILE 2>&1
+
+    # Build and start the Docker Compose services
+    docker-compose -f $DOCKER_COMPOSE_FILE -p $DOCKER_COMPOSE_PROJECT up -d --build >> $LOG_FILE 2>&1
+
+    # Sleep for the specified interval
+    sleep $CHECK_INTERVAL
+done
+In this updated script:
+
+The output of both git pull and docker-compose commands is redirected to a log file specified by the LOG_FILE variable.
+The >> operator appends the output to the log file, while 2>&1 redirects the error output to the same location as the standard output.
+By logging the output, you can review the log file to monitor any errors or issues that occur during the deployment process.
+You can adjust the LOG_FILE variable to specify the path and filename for your log file. Make sure the user running the script has write permissions to the specified location.
+
+Remember, this is a basic implementation, and for more complex scenarios, you may want to consider using proper logging frameworks or tools designed for managing application logs, such as logrotate, syslog, or specialized logging services.
+
+Please customize the variables and paths according to your specific needs and ensure that your system has the necessary permissions and dependencies in place.
+
+
+
+
+
+
