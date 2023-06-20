@@ -16,7 +16,7 @@ RUN apk update \
 COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-
+RUN python manage.py migrate
 
 # copy project
 COPY . .
