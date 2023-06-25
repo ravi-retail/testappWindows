@@ -1,0 +1,73 @@
+[2023-06-25 15:01:30,470: WARNING/MainProcess] No hostname was supplied. Reverting to default 'localhost'
+[2023-06-25 15:01:30,602: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:01:32,638: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 2.00 seconds... (1/100)
+
+[2023-06-25 15:14:48,330: WARNING/MainProcess] No hostname was supplied. Reverting to default 'localhost'
+[2023-06-25 15:14:48,478: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:14:50,541: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 2.00 seconds... (1/100)
+
+[2023-06-25 15:14:54,595: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 4.00 seconds... (2/100)
+
+[2023-06-25 15:15:00,651: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 6.00 seconds... (3/100)
+
+[2023-06-25 15:15:51,649: WARNING/MainProcess] No hostname was supplied. Reverting to default 'localhost'
+[2023-06-25 15:15:51,730: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:15:53,766: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 2.00 seconds... (1/100)
+
+[2023-06-25 15:15:57,791: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 4.00 seconds... (2/100)
+
+[2023-06-25 15:16:03,881: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 6.00 seconds... (3/100)
+
+[2023-06-25 15:16:11,985: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 8.00 seconds... (4/100)
+
+[2023-06-25 15:16:22,082: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 10061] [WinError 10061] No connection could be made because the target machine actively refused it..
+Trying again in 10.00 seconds... (5/100)
+
+[2023-06-25 15:20:31,324: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:20:31,870: INFO/MainProcess] Connected to redis://default:**@redis-18748.c301.ap-south-1-1.ec2.cloud.redislabs.com:18748//
+[2023-06-25 15:20:31,885: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:20:32,214: INFO/MainProcess] mingle: searching for neighbors
+[2023-06-25 15:20:34,159: INFO/MainProcess] mingle: all alone
+[2023-06-25 15:20:34,275: WARNING/MainProcess] c:\work\testappwindows\env\lib\site-packages\celery\worker\consumer\consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-06-25 15:20:34,457: INFO/MainProcess] pidbox: Connected to redis://default:**@redis-18748.c301.ap-south-1-1.ec2.cloud.redislabs.com:18748//.
+[2023-06-25 15:20:34,670: INFO/MainProcess] celery@DESKTOP-NMDCTDD ready.
+[2023-06-25 15:21:20,191: INFO/MainProcess] Task sender.tasks.add[d123fa85-cef8-4a23-a993-67b4ee0a4420] received
+[2023-06-25 15:21:20,263: INFO/MainProcess] Task sender.tasks.add[d123fa85-cef8-4a23-a993-67b4ee0a4420] succeeded in 0.06300000002374873s: 9
